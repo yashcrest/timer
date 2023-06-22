@@ -1,13 +1,6 @@
-.body {
+body{
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-}
-
-.container-timer {
-    width : 2em;
-    height: 2em;
-    border-radius: 10px;
-    border: solid red 2px;
 }
