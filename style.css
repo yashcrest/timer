@@ -5,38 +5,68 @@ body{
     height: 100vh;
     flex-direction: column;
     background-color: #282C34;
+    font-family: 'Courier New', Courier, monospace;
 }
 
 .container-timer {
-    height: 20rem;
+    height: 12rem;
     width: 20rem;
-    border: 2px solid red;
     border-radius: 20px ;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
     padding: 1rem;
-    background-color: white;
+    background-color: #cfcfcf;
 }
 
 h1 {
     color: white;
+    margin-bottom: 5px;
 }
 
 .screen {
-    background-color: antiquewhite;
-    height: 5rem;
+    height: 2rem;
     width: 100%;
-    border-radius: 5px;
     display: flex;
     justify-content: space-evenly;
     font-size: 2rem;
 }
 
+.screen input[type = 'number'] {
+    background-color: #cfcfcf;
+    font-size: 1em;
+    width: 2em;
+    text-align: center;
+    border: none;
+    outline: none;
+}
+
+/* Chrome, Safari, Edge, Opera to remove spinners next to input field  */
+.screen input::-webkit-outer-spin-button,
+.screen input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* FireFox to remove spinners next to input field */
+.screen input[type=number] {
+    -moz-appearance: textfield;
+}
+
+
+.error-msg {
+    color: rgb(210, 67, 5);
+    font-size: 12px;
+    display: none;
+    font-weight: bold;
+    position: absolute;
+    width: 60px;
+}
+
 .buttons {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     width: 100%;
 }
 
@@ -48,6 +78,9 @@ h1 {
     background-color: #333;
     color: white;
     border-radius: 5px;
+    height: 5rem;
+    width: 6rem;
+    font-size: 1.5em;
 }
 
 .buttons input[type="button"]:hover {

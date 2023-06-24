@@ -11,14 +11,23 @@
     <h1>Timer</h1>
     <div class="container-timer">
         <div class="screen">
-            <input type="text"  placeholder="00h">
-            <input type="text"  placeholder="00m">
-            <input type="text"  placeholder="00s">
+            <div class="input-wrapper hour">
+                <input type="number" placeholder="00h" id="hour">
+                <span id="hour-error" class="error-msg"></span>
+            </div>
+            <div class="input-wrapper minute">
+                <input type="number" placeholder="00m" id="minute">
+                <span id="minute-error" class="error-msg"></span>
+            </div>
+            <div class="input-wrapper second">
+                <input type="number" placeholder="00s" id="second">
+                <span id="second-error" class="error-msg"></span>
+            </div>
         </div>
         <div class="buttons">
-            <input type="button" value="Start">
-            <input type="button" value="Pause">
-            <input type="button" value="Reset">
+            <input type="button" value="Start" id="start">
+            <input type="button" value="| |" style="font-weight: bold;" id="pause">
+            <input type="button" value="Reset" id="reset">
         </div>
     </div>
     
