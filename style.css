@@ -64,6 +64,11 @@ h1 {
     width: 60px;
 }
 
+#timer {
+    position: absolute;
+    font-style: bold;
+}
+
 .buttons {
     display: flex;
     justify-content: space-around;
