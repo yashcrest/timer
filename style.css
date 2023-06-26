@@ -3,4 +3,37 @@ body{
     justify-content: center;
     align-items: center;
     height: 100vh;
+   flex-direction: column;
+   font: ;
+}
+
+
+.container-timer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 30rem;
+    min-width: 50rem;
+    max-width: max-content;
+    max-width: max-content;
+    border: 2px solid red;
+    padding: 2rem;
+    border-radius: 2rem;
+}
+
+.screen {
+    border-radius: 1em;
+    height: 100px;
+    height: 100px;
+    background-color: #e3e3e3;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.buttons input[type='button'] {
+    padding: 20px;
+
 }
