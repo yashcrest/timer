@@ -1,3 +1,0 @@
-1. When the user clicks on the start button without entering any value in, we need to display a msg "Enter a value first".
-2. When the user clicks on the reset button when the timer is being run, we need to display back the input field so that they can enter the value again. 
-3. I have still not entered any functionality for the pause button. 
