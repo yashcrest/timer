@@ -4,14 +4,8 @@ body{
     align-items: center;
     height: 100vh;
    flex-direction: column;
-}
-
-.buttons {
-    display: flex;
-    justify-content: space-evenly;
-    flex-direction: column;
-    background-color: #282C34;
-    font-family: 'Courier New', Courier, monospace;
+   background-color: #282C34;
+   font-family: 'Courier New', Courier, monospace;
 }
 
 .container-timer {
@@ -70,6 +64,11 @@ h1 {
     width: 60px;
 }
 
+#timer {
+    position: absolute;
+    font-style: bold;
+}
+
 .buttons {
     display: flex;
     justify-content: space-around;
@@ -87,4 +86,8 @@ h1 {
     height: 5rem;
     width: 6rem;
     font-size: 1.5em;
+}
+
+.buttons input[type='button']:hover {
+    background-color: #4e4c4c;
 }
