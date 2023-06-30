@@ -75,17 +75,20 @@ start_btn.addEventListener('click', ()=> {
     const totalMinutes = parseInt(minute.value) || 0;
     const totalSeconds = parseInt(second.value) || 0;
     const screenDiv = document.querySelector('.screen');
-    const pElement = document.createElement('p');
 
     //Hide input field
     hour.style.display = 'none'
     minute.style.display = 'none'
     second.style.display = 'none'
-   
-    pElement.id = 'timer'; 
-    //Append the p element
-    screenDiv.appendChild(pElement);
-    startTimer(totalHours, totalMinutes, totalSeconds);
+
+    //check if the <p> element is already created
+    if(!screenDiv.querySelector('p#timer')){
+        const pElement = document.createElement('p')
+        pElement.id = 'timer'
+        screenDiv.appendChild(pElement)
+        startTimer(totalHours, totalMinutes, totalSeconds);
+    }
+    
 });
 
 //pause timer
@@ -98,7 +101,7 @@ reset_btn.addEventListener('click' , function(){
     hour.value = ''
     minute.value = ''
     second.value = ''
-
+    clearInterval(interval)
     hour.style.display = 'inline';
     minute.style.display = 'inline';
     second.style.display = 'inline';
@@ -107,4 +110,11 @@ reset_btn.addEventListener('click' , function(){
     if(timerElement) {
         timerElement.parentElement.removeChild(timerElement);
     }
+
+    //Reset remainingSeconds and interval as well
+    if(interval) {
+        clearInterval(interval);
+        interval = null;
+    }
+    remainingSeconds = null;
 })
